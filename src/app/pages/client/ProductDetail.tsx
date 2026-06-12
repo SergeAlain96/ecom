@@ -78,7 +78,7 @@ ${orderForm.comment ? `Commentaire : ${orderForm.comment}` : ''}
 
 Merci.`;
 
-    const whatsappUrl = `https://wa.me/22370000000?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/22667384509?text=${encodeURIComponent(message)}`;
     
     // Simulate order save
     toast.success('Commande enregistrée ! Redirection vers WhatsApp...');
@@ -219,7 +219,7 @@ Merci.`;
                 className="w-full rounded-xl text-lg py-6 border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white"
               >
                 <a
-                  href={`https://wa.me/22370000000?text=${encodeURIComponent(`Bonjour, je suis intéressé par ${product.name}`)}`}
+                  href={`https://wa.me/22667384509?text=${encodeURIComponent(`Bonjour, je suis intéressé par ${product.name}`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2"

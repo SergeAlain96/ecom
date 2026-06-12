@@ -49,30 +49,32 @@ export function Hero() {
               <span className="text-primary text-sm font-medium">Commandez via WhatsApp — Livraison rapide</span>
             </motion.div>
 
-            <motion.h1
+            <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-['Poppins'] text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
             >
-              Vos produits préférés{' '}
-              <span className="relative">
-                <span className="text-primary">à portée</span>
-                <svg className="absolute -bottom-1 left-0 w-full" viewBox="0 0 300 8" fill="none">
-                  <path d="M2 6C50 2 100 1 150 3C200 5 250 4 298 2" stroke="#FF5722" strokeWidth="3" strokeLinecap="round" />
-                </svg>
-              </span>{' '}
-              de main
-            </motion.h1>
+              <h1 className="font-['Poppins'] text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                Vos produits préférés{' '}
+                <span className="relative">
+                  <span className="text-primary">à portée</span>
+                  <svg className="absolute -bottom-1 left-0 w-full" viewBox="0 0 300 8" fill="none">
+                    <path d="M2 6C50 2 100 1 150 3C200 5 250 4 298 2" stroke="#FF5722" strokeWidth="3" strokeLinecap="round" />
+                  </svg>
+                </span>{' '}
+                de main
+              </h1>
+            </motion.div>
 
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg text-white/75 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed"
             >
-              Commandez rapidement et échangez directement avec le vendeur via WhatsApp. Sans inscription, sans complication.
-            </motion.p>
+              <p className="text-lg text-white/75 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                Commandez rapidement et échangez directement avec le vendeur via WhatsApp. Sans inscription, sans complication.
+              </p>
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -98,7 +100,7 @@ export function Hero() {
                 className="rounded-xl border-2 border-white/20 bg-white/5 backdrop-blur-sm text-white hover:bg-white/15 px-8 py-6 text-base font-semibold transition-all"
               >
                 <a
-                  href="https://wa.me/22370000000"
+                  href="https://wa.me/22667384509"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"

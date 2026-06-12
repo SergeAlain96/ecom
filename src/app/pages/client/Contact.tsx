@@ -64,7 +64,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Adresse</h3>
-                    <p className="text-sm text-muted-foreground">Bamako, Mali</p>
+                    <p className="text-sm text-muted-foreground">Ouagadougou, Burkina Faso</p>
                   </div>
                 </div>
               </CardContent>
@@ -77,7 +77,7 @@ export function Contact() {
                   className="w-full rounded-xl bg-white text-[#25D366] hover:bg-white/90"
                 >
                   <a
-                    href="https://wa.me/22370000000"
+                    href="https://wa.me/22667384509"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2"

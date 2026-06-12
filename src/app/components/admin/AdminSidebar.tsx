@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import {
   LayoutDashboard,
   Package,
@@ -9,9 +9,11 @@ import {
   Store,
   ChevronLeft,
   X,
+  LogOut,
 } from 'lucide-react';
 import { cn } from '../ui/utils';
 import { Button } from '../ui/button';
+import { useAuth } from '../../../context/AuthContext';
 
 const menuItems = [
   { icon: LayoutDashboard, label: 'Tableau de bord', href: '/admin' },
@@ -41,6 +43,13 @@ function SidebarContent({
   readonly showCloseButton?: boolean;
 }) {
   const location = useLocation();
+  const { signOut } = useAuth();
+  const navigate = useNavigate();
+
+  const handleSignOut = async () => {
+    await signOut();
+    navigate('/admin/login');
+  };
 
   return (
     <div className="flex h-full flex-col bg-[#303841] text-white">
@@ -103,19 +112,24 @@ function SidebarContent({
       </nav>
 
       {/* Footer */}
-      <div className="border-t border-white/10 p-3 shrink-0">
+      <div className="border-t border-white/10 p-3 shrink-0 space-y-2">
         <Button
           asChild
           variant="outline"
-          className={cn(
-            'w-full rounded-xl border-white/20 text-white hover:bg-white/10 hover:text-white text-sm',
-            collapsed && 'px-2'
-          )}
+          className={cn('w-full rounded-xl border-white/20 text-white hover:bg-white/10 hover:text-white text-sm', collapsed && 'px-2')}
         >
           <Link to="/" onClick={onLinkClick} className="flex items-center gap-2 justify-center">
             <Store className="h-4 w-4 shrink-0" />
             {!collapsed && <span>Voir la boutique</span>}
           </Link>
+        </Button>
+        <Button
+          variant="ghost"
+          className={cn('w-full rounded-xl text-white/60 hover:text-white hover:bg-white/10 text-sm', collapsed && 'px-2')}
+          onClick={handleSignOut}
+        >
+          <LogOut className="h-4 w-4 shrink-0" />
+          {!collapsed && <span className="ml-2">Déconnexion</span>}
         </Button>
       </div>
     </div>

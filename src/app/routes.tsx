@@ -16,9 +16,20 @@ import { AdminCategories } from './pages/admin/Categories';
 import { AdminCustomers } from './pages/admin/Customers';
 import { AdminSettings } from './pages/admin/Settings';
 import { AdminLayout } from './components/admin/AdminLayout';
+import { AdminLogin } from './pages/admin/Login';
+import { ProtectedRoute } from './components/admin/ProtectedRoute';
 
-// Other Pages
+// Other
 import { NotFound } from './pages/NotFound';
+
+// Wrapper — évite le mélange element/Component qui cause insertBefore
+function AdminLayoutProtected() {
+  return (
+    <ProtectedRoute>
+      <AdminLayout />
+    </ProtectedRoute>
+  );
+}
 
 export const router = createBrowserRouter([
   {
@@ -33,8 +44,12 @@ export const router = createBrowserRouter([
     ],
   },
   {
+    path: '/admin/login',
+    Component: AdminLogin,
+  },
+  {
     path: '/admin',
-    Component: AdminLayout,
+    Component: AdminLayoutProtected,
     children: [
       { index: true, Component: Dashboard },
       { path: 'products', Component: AdminProducts },
@@ -44,8 +59,5 @@ export const router = createBrowserRouter([
       { path: 'settings', Component: AdminSettings },
     ],
   },
-  {
-    path: '*',
-    Component: NotFound,
-  },
+  { path: '*', Component: NotFound },
 ]);

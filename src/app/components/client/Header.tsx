@@ -70,7 +70,7 @@ export function Header() {
             className="hidden md:flex rounded-xl bg-[#25D366] hover:bg-[#20BA5A] shadow-sm text-sm"
           >
             <a
-              href="https://wa.me/22370000000"
+              href="https://wa.me/22667384509"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2"
@@ -131,7 +131,7 @@ export function Header() {
                   className="rounded-xl bg-[#25D366] hover:bg-[#20BA5A] w-full"
                 >
                   <a
-                    href="https://wa.me/22370000000"
+                    href="https://wa.me/22667384509"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2"

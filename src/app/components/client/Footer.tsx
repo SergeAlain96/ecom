@@ -63,7 +63,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2 text-sm">
                 <MapPin className="h-4 w-4 mt-0.5 text-primary" />
-                <span className="text-white/80">Bamako, Mali</span>
+                <span className="text-white/80">Ouagadougou, Burkina Faso</span>
               </li>
             </ul>
           </div>
