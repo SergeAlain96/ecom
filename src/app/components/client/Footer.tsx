@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, Lock } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -100,10 +100,17 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-8 pt-8 text-center">
+        <div className="border-t border-white/10 mt-8 pt-8 flex items-center justify-between">
           <p className="text-white/60 text-sm">
             © {currentYear} Yiriwa. Tous droits réservés.
           </p>
+          <Link
+            to="/admin/login"
+            className="text-white/20 hover:text-white/50 transition-colors"
+            title="Administration"
+          >
+            <Lock className="h-4 w-4" />
+          </Link>
         </div>
       </div>
     </footer>
