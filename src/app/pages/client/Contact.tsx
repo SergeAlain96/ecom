@@ -36,7 +36,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Téléphone</h3>
-                    <p className="text-sm text-muted-foreground">+223 70 00 00 00</p>
+                    <p className="text-sm text-muted-foreground">+226 67 38 45 09</p>
                   </div>
                 </div>
               </CardContent>

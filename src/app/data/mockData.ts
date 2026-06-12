@@ -260,7 +260,7 @@ export const customers: Customer[] = [
 
 export const shopSettings: ShopSettings = {
   shopName: 'Yiriwa',
-  whatsappNumber: '+223 70 00 00 00',
+  whatsappNumber: '+226 67 38 45 09',
   bannerImages: ['ecommerce banner shopping', 'online store products', 'fashion shopping mobile'],
   socialMedia: {
     facebook: 'https://facebook.com/yiriwa',
