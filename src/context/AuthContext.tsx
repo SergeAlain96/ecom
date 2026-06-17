@@ -21,8 +21,11 @@ export function AuthProvider({ children }: { readonly children: ReactNode }) {
       setLoading(false);
     });
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, s) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, s) => {
       setSession(s);
+      if (event === 'PASSWORD_RECOVERY') {
+        window.location.href = '/admin/login';
+      }
     });
 
     return () => subscription.unsubscribe();
