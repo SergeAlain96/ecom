@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router';
-import { Search, Menu, MessageCircle } from 'lucide-react';
+import { Search, Menu, MessageCircle, Lock } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
@@ -79,6 +79,15 @@ export function Header() {
               <span className="hidden lg:inline">WhatsApp</span>
             </a>
           </Button>
+
+          {/* Admin Lock */}
+          <Link
+            to="/admin/login"
+            title="Administration"
+            className="flex items-center justify-center h-9 w-9 rounded-xl border border-gray-200 text-gray-400 hover:text-primary hover:border-primary transition-colors"
+          >
+            <Lock className="h-4 w-4" />
+          </Link>
 
           {/* Mobile Menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
